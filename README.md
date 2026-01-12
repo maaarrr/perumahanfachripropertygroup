@@ -4,11 +4,12 @@
   </a>
 </p>
 
-# Fachri Property Group - One Page Website
+# 🏘️ Fachri Property Group
 
-Website landing page untuk **Fachri Property Group**, pengembang properti terpercaya yang menyediakan hunian berkualitas di lokasi strategis untuk keluarga Indonesia.
+Website promosi perumahan menggunakan **Laravel**.  
+Terdiri dari landing page one page dan dashboard admin menggunakan Filament.
 
-## Fitur
+## 🚀 Fitur
 
 - Landing page responsif
 - Informasi unit perumahan (D'Fanisa Residence, Bumi Serdam Indah, The Avana Residence)
@@ -16,6 +17,42 @@ Website landing page untuk **Fachri Property Group**, pengembang properti terper
 - Kontak WhatsApp langsung
 - Testimoni video YouTube
 - Footer dengan alamat & tautan cepat
+- Dashboard Admin dengan Filament
+- Manajemen data perumahan
+- Database MySQL
+
+## 💻 Tech Stack
+
+- Laravel 11
+- Filament 3.x
+- MySQL
+- Tailwind CSS
+
+## 📦 Instalasi
+
+```bash
+# Clone repository
+git clone https://github.com/maaarrr/perumahanfachripropertygroup.git
+
+# Masuk ke folder project
+cd perumahanfachripropertygroup
+
+# Install dependencies
+composer install
+npm install
+
+# Copy .env
+cp .env.example .env
+
+# Generate key
+php artisan key:generate
+
+# Migrate database
+php artisan migrate
+
+# Jalankan server
+php artisan serve
+```
 
 ## Struktur Folder
 
@@ -26,24 +63,11 @@ Website landing page untuk **Fachri Property Group**, pengembang properti terper
 - `routes/web.php`  
   Routing utama Laravel
 
-## Cara Menjalankan
-
-1. **Clone repo ini**
-2. Jalankan `composer install`
-3. Copy `.env.example` ke `.env` dan sesuaikan konfigurasi (jika perlu)
-4. Jalankan `php artisan key:generate`
-5. Jalankan server:
-    ```
-    php artisan serve
-    ```
-6. Akses di browser: [http://localhost:8000](http://localhost:8000)  
-   (atau domain lokal sesuai konfigurasi)
-
 ## Catatan
 
 - Semua gambar dan file statis ada di folder `public/`
-- Tidak ada backend database, hanya one page statis
 - Untuk mengubah unit atau kontak, edit file `resources/views/welcome.blade.php`
+- Dashboard admin dan manajemen data menggunakan Filament (akses sesuai konfigurasi admin)
 
 ## Lisensi
 
