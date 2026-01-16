@@ -11,14 +11,16 @@ Terdiri dari landing page one page dan dashboard admin menggunakan Filament.
 
 ## 🚀 Fitur
 
-- Landing page responsif
-- Informasi unit perumahan (D'Fanisa Residence, Bumi Serdam Indah, The Avana Residence)
+- Landing page responsif & dinamis (semua data dari database)
+- Informasi unit perumahan (nama, lokasi, tipe, total unit)
 - Galeri gambar & slider unit
-- Kontak WhatsApp langsung
+- Daftar fasilitas properti (ikon & deskripsi, bisa diatur admin)
+- Daftar lokasi strategis (bisa diatur admin)
+- Kontak WhatsApp langsung per unit
 - Testimoni video YouTube
 - Footer dengan alamat & tautan cepat
 - Dashboard Admin dengan Filament
-- Manajemen data perumahan
+- Manajemen data perumahan, gambar, fasilitas, lokasi strategis
 - Database MySQL
 
 ## 💻 Tech Stack
@@ -42,7 +44,7 @@ composer install
 npm install
 
 # Copy .env
-cp .env.example .env
+cp [.env.example](http://_vscodecontentref_/1) .env
 
 # Generate key
 php artisan key:generate

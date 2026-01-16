@@ -2,24 +2,36 @@
 
 namespace Database\Seeders;
 
+use App\Models\Setting;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Buat user admin default
+        User::firstOrCreate(
+            ['email' => 'admin@fachriproperty.com'],
+            [
+                'name' => 'Admin',
+                'password' => Hash::make('password'),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Buat setting default
+        Setting::firstOrCreate([], [
+            'company_description' => 'Fachri Property Group adalah pengembang properti terpercaya yang menyediakan hunian berkualitas di lokasi strategis untuk keluarga Indonesia.',
+            'office_address' => "Jl. Ampera No.22, RT.003/RW.015\nKel. Sei Raya, Kec. Pontianak Kota\nKalimantan Barat 78113",
+            'phone_number' => '0561-817-7746',
+            'email' => 'fachri@gmail.com',
+            'whatsapp_float' => '6285750777700',
+            'testimonial_youtube_url' => 'https://www.youtube.com/embed/fvQKuJYsuXs?si=ZMxSFQs_scQZaZi2',
+            'testimonial_title' => 'TESTIMONI MEREKA',
+            'hero_title' => 'KANTOR PEMASARAN',
+            'hero_subtitle' => 'PERUMAHAN',
+            'hero_tagline' => '"Beli Rumah Harus Fachri Property Group"',
         ]);
     }
 }

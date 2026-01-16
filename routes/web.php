@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 // ...existing code...
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Ganti route lama '/' dengan controller
+Route::get('/', [HomeController::class, 'index']);
 
 // ...existing code...
